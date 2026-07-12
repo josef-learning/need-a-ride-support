@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Need a Ride — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1c1c1e;
+    background: #f2f2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f7; background: #000; }
+    .card { background: #1c1c1e !important; }
+    a { color: #0a84ff !important; }
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { text-align: center; margin-bottom: 40px; }
+  .icon {
+    width: 88px; height: 88px; border-radius: 20px;
+    background: #0a76f5; display: inline-flex; align-items: center; justify-content: center;
+    font-size: 46px; margin-bottom: 16px;
+  }
+  h1 { font-size: 30px; margin: 0 0 4px; }
+  .tagline { color: #8e8e93; margin: 0; }
+  .card {
+    background: #fff; border-radius: 16px; padding: 24px 28px; margin: 18px 0;
+  }
+  h2 { font-size: 20px; margin: 0 0 12px; }
+  a { color: #0a76f5; }
+  .contact a { font-weight: 600; font-size: 18px; }
+  details { margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
+  details p { margin: 4px 0 12px; color: #636366; }
+  @media (prefers-color-scheme: dark) { details p { color: #aeaeb2; } .tagline { color: #8e8e93; } }
+  footer { text-align: center; color: #8e8e93; font-size: 14px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="icon">🚗</div>
+    <h1>Need a Ride</h1>
+    <p class="tagline">Get picked up in one tap.</p>
+  </header>
+
+  <div class="card contact">
+    <h2>Contact &amp; Support</h2>
+    <p>Questions, feedback, or a problem with the app? Email us and we'll get back to you:</p>
+    <p><a href="mailto:josef.larsen.a@hotmail.com">josef.larsen.a@hotmail.com</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Frequently asked questions</h2>
+
+    <details open>
+      <summary>How do I use the app?</summary>
+      <p>Add the person who usually picks you up, then tap “Pick me up.” The app opens a text message to them with your current location and a map link. You can also tap the map to set a different pickup spot before sending.</p>
+    </details>
+
+    <details>
+      <summary>Does the other person need the app?</summary>
+      <p>No. Need a Ride sends a normal text message, so anyone with a phone can receive it. The map link opens in Apple Maps or Google Maps.</p>
+    </details>
+
+    <details>
+      <summary>Is my location tracked?</summary>
+      <p>No. Your location is only used to build the message you choose to send. It is never collected, stored on a server, or shared in the background. Your contacts stay on your device.</p>
+    </details>
+
+    <details>
+      <summary>The app says it’s waiting for GPS.</summary>
+      <p>Make sure Location access is enabled for Need a Ride in Settings → Privacy &amp; Security → Location Services. Give it a few seconds outdoors or near a window to get a fix, then try again.</p>
+    </details>
+
+    <details>
+      <summary>I can’t send a message.</summary>
+      <p>Sending a text requires a device that can send SMS/iMessage. This won’t work on a Wi-Fi-only iPad. Try again from an iPhone.</p>
+    </details>
+  </div>
+
+  <div class="card">
+    <h2>Privacy</h2>
+    <p>Need a Ride does not collect any personal data. Contacts and settings are stored only on your device. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <footer>
+    © 2026 Josef Larsen · Need a Ride
+  </footer>
+</div>
+</body>
+</html>
