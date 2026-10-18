@@ -18,12 +18,16 @@
     body { color: #f2f2f7; background: #000; }
     .card { background: #1c1c1e !important; }
     a { color: #0a84ff !important; }
+    th, td { border-color: #3a3a3c !important; }
   }
   .wrap { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
   h1 { font-size: 28px; }
   h2 { font-size: 20px; margin-top: 28px; }
   .card { background: #fff; border-radius: 16px; padding: 24px 28px; }
-  a { color: #0a76f5; }
+  a { color: #0a76f5; overflow-wrap: anywhere; }
+  ul { padding-left: 22px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-bottom: 1px solid #e5e5ea; }
   .updated { color: #8e8e93; font-size: 14px; }
   footer { text-align: center; color: #8e8e93; font-size: 14px; margin-top: 40px; }
 </style>
@@ -34,38 +38,106 @@
   <p class="updated">Ping Pong Tycoon: Idle Table Tennis Club Game · Last updated 18 October 2026</p>
 
   <div class="card">
-    <p>Ping Pong Tycoon is made by Josef Larsen ("we") in Denmark. In short: <strong>your club stays on your phone, we have no accounts or servers of our own, and the game never tracks you.</strong></p>
+    <p><strong>In short:</strong></p>
+    <ul>
+      <li>Your club stays on your phone.</li>
+      <li>We have no accounts and no servers of our own.</li>
+      <li>The game never tracks you across other companies' apps or websites.</li>
+      <li>The game sends anonymous gameplay statistics, which you can switch off.</li>
+      <li>Its optional ads come from Google, which collects some data to show and measure them.</li>
+    </ul>
+
+    <h2>Who we are</h2>
+    <p>Ping Pong Tycoon is made by Josef Larsen ("we", "us"), Lærkehøjen 5, 4690 Haslev, Denmark. We are the data controller for the game. Contact for anything about privacy: <a href="mailto:josef.larsen.a@hotmail.com">josef.larsen.a@hotmail.com</a>.</p>
 
     <h2>What stays on your phone</h2>
-    <p>Your club, your progress, your club's name and colours, and your settings are saved on your device only. We never see them.</p>
+    <p>These are saved on your device only:</p>
+    <ul>
+      <li>your club, your progress, the club's name and colours;</li>
+      <li>your settings: sound, reminders, the stats switch;</li>
+      <li>the last Game Center leaderboards the game showed (players' Game Center names, places and scores), so the leaderboard screen works offline.</li>
+    </ul>
+    <p>We never see them.</p>
+    <p>The game also keeps a small record in your iPhone's <strong>keychain</strong>: which one-time purchases and bonuses were already delivered (their transaction numbers and, for a season pass, the season). It holds nothing else. iOS keeps keychain items when an app is deleted, so a reinstall doesn't pay the same bonus twice or lose a pass bought for the current season. Deleting the app removes everything else the game stored.</p>
 
-    <h2>Game analytics</h2>
-    <p>To improve the game we receive anonymous gameplay events through <a href="https://telemetrydeck.com/privacy/">TelemetryDeck</a>. For example: which tutorial step was finished, when a club moves to a new venue, how long a session lasted (in whole minutes), which chest was opened, that a rewarded ad was watched, and the product id of an App Store purchase. TelemetryDeck receives a salted, one-way hash instead of a device identifier, and nothing that identifies you. We don't use this data for advertising, and we don't sell or share it.</p>
+    <h2>Anonymous game statistics (TelemetryDeck)</h2>
+    <p><strong>What.</strong> To see where the game is too slow, too fast or confusing, the game sends anonymous gameplay events:</p>
+    <ul>
+      <li>tutorial steps finished or skipped;</li>
+      <li>the first upgrade, and how many minutes of play it took;</li>
+      <li>moves to a new venue;</li>
+      <li>how long a session lasted, in whole minutes;</li>
+      <li>which chest was opened;</li>
+      <li>that a rewarded ad was watched, and from which button;</li>
+      <li>that a reminder was tapped;</li>
+      <li>the product id of an App Store purchase (for example "Gold pack S"; never a price, payment detail or Apple Account).</li>
+    </ul>
+    <p><strong>Device details.</strong> Our analytics provider adds technical details to each event: app version, device model, iOS version, language, region and time zone, screen size, and a few accessibility settings such as larger text. It also counts sessions.</p>
+    <p><strong>No identity.</strong> Instead of a device identifier, your phone sends a salted one-way hash of the app's vendor identifier. TelemetryDeck hashes it again on its servers. We can't use this to find out who you are, and we don't try. The advertising identifier (IDFA) is never used.</p>
+    <p><strong>Who and where.</strong> The data is processed for us by <strong>TelemetryDeck GmbH</strong>, Germany, on servers in the EU. TelemetryDeck says it doesn't store IP addresses. Its privacy policy: <a href="https://telemetrydeck.com/privacy/">telemetrydeck.com/privacy</a>.</p>
+    <p><strong>Legal basis.</strong> Our legitimate interest in improving the game (GDPR Art. 6(1)(f)). The data doesn't identify you, and it is used only to improve the game: never for advertising, never sold or shared with anyone else.</p>
+    <p><strong>Your choice.</strong> Switch it off at any time: <strong>Settings</strong> (the gear at the top of the screen) → <strong>Anonymous game stats</strong>. When it is off, the game sends no statistics.</p>
 
-    <h2>Advertising</h2>
-    <p>The game shows optional rewarded ads from Google AdMob, only when you tap a button that offers a reward. We request non-personalised ads, and the game never asks for permission to track you, so the advertising identifier (IDFA) is not available to the game or to Google.</p>
-    <p>To serve and measure ads, Google's SDK collects data such as your approximate location (from the IP address), device and app information, ad interactions and diagnostics. In the EEA, the UK and Switzerland, Google's consent form asks for your choice before ads are requested, and you can change it at any time in the game's Settings (the gear at the top of the screen). See <a href="https://policies.google.com/privacy">Google's privacy policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from partner apps</a>.</p>
+    <h2>Advertising (Google AdMob)</h2>
+    <p>The game shows optional <strong>rewarded ads</strong> from Google AdMob, and only when you tap a button that offers a reward. There are no banners and no pop-up ads. Owner's Pass holders get the rewards without watching ads.</p>
+    <p><strong>Our settings.</strong> We ask Google for <strong>non-personalised ads</strong> with content suitable for a general audience (rated PG or lower). The game never asks for permission to track you, so the advertising identifier (IDFA) isn't available to the game or to Google. We have also switched off Google's own per-app identifier for this game.</p>
+    <p><strong>What Google collects.</strong> To serve ads, measure them and prevent fraud, Google's software in the game collects:</p>
+    <ul>
+      <li>your approximate location, from your IP address;</li>
+      <li>device and app information;</li>
+      <li>which ads were shown and how you interacted with them;</li>
+      <li>performance and crash diagnostics.</li>
+    </ul>
+    <p>Google is an <strong>independent controller</strong> of this data under its own privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>, and <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from apps that use its services</a>.</p>
+    <p>Google LLC is in the USA. Google says these transfers rely on the <strong>EU-US Data Privacy Framework</strong>, its UK and Swiss extensions, and Standard Contractual Clauses (<a href="https://policies.google.com/privacy/frameworks">policies.google.com/privacy/frameworks</a>).</p>
+    <p><strong>Consent in Europe.</strong> In the EEA, the UK and Switzerland, Google's consent form asks for your choice before ads are requested. For storing or reading information on your device for ads, the legal basis is your <strong>consent</strong> (GDPR Art. 6(1)(a)). If you don't consent, Google may still show "limited ads" that use no identifiers except what it needs to detect fraud. To change or withdraw your choice at any time: <strong>Settings</strong> → <strong>Privacy choices</strong>. If you are under 15 in Denmark, or under the age of digital consent in your country, ask a parent before you agree.</p>
+    <p><strong>Outside Europe.</strong> Ads are shown on the basis of our legitimate interest in funding a free game (GDPR Art. 6(1)(f), where GDPR applies).</p>
+    <p><strong>Report an ad.</strong> If you see an ad that is inappropriate or not suitable for this game's audience, tap <strong>Settings</strong> → <strong>Report an ad</strong>, or e-mail us. Tell us what it showed and roughly when.</p>
 
     <h2>Purchases</h2>
-    <p>In-app purchases are processed by Apple through the App Store. We never see your payment details.</p>
+    <p>In-app purchases are made and processed by <strong>Apple</strong> through the App Store. We never see your name, Apple Account or payment details. Apple's own terms cover refunds and your 14-day right of withdrawal in the EU: use "Report a Problem", or Purchase History in your Apple Account settings. The game only receives the product you bought, so it can deliver it.</p>
 
     <h2>Game Center</h2>
-    <p>If you are signed in to Game Center, your scores and achievements are reported to Apple's Game Center under your Game Center profile, under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. We don't receive your Apple Account details.</p>
+    <p>If you are signed in to Game Center, your scores and achievements go to <strong>Apple's</strong> Game Center under your Game Center profile. <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a> applies.</p>
+    <p>Each score also carries your club's crest (its shape, emblem, two colours and up to three initials), so other players see it next to your Game Center name on the leaderboards. Don't put anything personal in the initials.</p>
+    <p>The game's leaderboard screen shows other players' Game Center names, photos and scores. It keeps the last leaderboard it showed <strong>on your device</strong> so it works offline. If you tap "Friends", iOS asks whether the game may read your Game Center friends list; the game reads it on your device only to show your friends' places, and never sends it to us. You can change this in the iOS Settings app under Game Center.</p>
+    <p>We don't receive your Apple Account details, your scores or your friends list.</p>
 
     <h2>Notifications</h2>
-    <p>If you allow notifications, the game schedules reminders on your device (for example when your hall is full or the club bus is back). Nothing is sent to us.</p>
+    <p>If you allow notifications, the game schedules its reminders <strong>on your device</strong> (for example: your hall is full, the club bus is back). Nothing is sent to us or to a server. You can switch reminders off in Settings or in the iOS Settings app.</p>
 
-    <h2>Children</h2>
-    <p>The game is not directed at children under 13, and we don't knowingly collect data from them.</p>
+    <h2>E-mail to us</h2>
+    <p>If you e-mail us (support, a privacy question or an ad report), we use your e-mail address and message only to answer you (GDPR Art. 6(1)(f), our legitimate interest in answering). We delete them no later than two years after the conversation ends. Our mailbox is provided by Microsoft (Outlook.com), which may process it in the USA under the EU-US Data Privacy Framework.</p>
+
+    <h2>How long data is kept</h2>
+    <table>
+      <tr><th>Data</th><th>How long</th></tr>
+      <tr><td>Data on your phone</td><td>Until you delete the app; the keychain record above stays until you reset your iPhone.</td></tr>
+      <tr><td>Anonymous statistics</td><td>Kept while they help us improve the game. Because they don't identify anyone, they can't be linked back to you.</td></tr>
+      <tr><td>Google's ad data</td><td>As described in <a href="https://policies.google.com/technologies/retention">Google's retention policy</a>.</td></tr>
+      <tr><td>Support e-mails</td><td>Up to two years after the conversation ends.</td></tr>
+    </table>
 
     <h2>Your rights</h2>
-    <p>Because we hold no data that identifies you, we can't look up, export or delete data about a person. Deleting the app deletes everything the game stored on your device. For Google's ad data, use Google's controls linked above.</p>
+    <p>Under the GDPR you have the right to access the personal data we hold about you, to have it corrected or deleted, to restrict or object to its use, to data portability, and to withdraw consent at any time (this doesn't affect anything done before you withdrew it).</p>
+    <p>Because the game data we receive is anonymous, we can't find or delete data for a particular person, but you can switch the statistics off. For Google's ad data, use Google's controls linked above and the game's Privacy choices. To use your rights, e-mail us.</p>
+    <p>You can also complain to the Danish Data Protection Agency (<strong>Datatilsynet</strong>), Carl Jacobsens Vej 35, 2500 Valby, Denmark, <a href="https://www.datatilsynet.dk">datatilsynet.dk</a>, or to the data protection authority where you live.</p>
+
+    <h2>Other things the law asks us to tell you</h2>
+    <ul>
+      <li>You don't have to provide any personal data to play.</li>
+      <li>Ads, statistics and Game Center are all optional.</li>
+      <li>We make no automated decisions about you and do no profiling.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>Ping Pong Tycoon is rated 13+ on the App Store. It is not directed at children under 13, and we don't knowingly collect personal data from them. If you think a child under 13 has sent us personal data (for example by e-mail), contact us and we will delete it.</p>
 
     <h2>Changes</h2>
     <p>If this policy changes, the new version will be posted on this page with a new date.</p>
 
     <h2>Contact</h2>
-    <p>Questions about privacy? Email <a href="mailto:josef.larsen.a@hotmail.com">josef.larsen.a@hotmail.com</a>.</p>
+    <p>Josef Larsen, Lærkehøjen 5, 4690 Haslev, Denmark · <a href="mailto:josef.larsen.a@hotmail.com">josef.larsen.a@hotmail.com</a></p>
   </div>
 
   <footer>
